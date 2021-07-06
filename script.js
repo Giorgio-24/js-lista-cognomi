@@ -10,8 +10,14 @@ console.log(lastNamesList)
 var userLastName = prompt('Inserisci il tuo cognome');
 console.log(userLastName)
 
-lastNamesList.push(userLastName);
-console.log(lastNamesList)
+var a = lastNamesList.push(userLastName);
+console.log(a)
 
-lastNamesList.sort();
-console.log(lastNamesList)
+var b = lastNamesList.sort();
+console.log(b)
+
+var c = lastNamesList.length;
+console.log(c)
+
+var d = lastNamesList.indexOf(userLastName) + 1;
+console.log(d)
