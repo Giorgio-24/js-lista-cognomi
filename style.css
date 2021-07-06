@@ -12,6 +12,7 @@ body{
 }
 
 body li{
-    margin: 100px;
+    margin: 100px auto;
     list-style-type: none;
+    max-width: 950px;
 }
