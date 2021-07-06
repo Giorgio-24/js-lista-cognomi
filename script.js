@@ -7,10 +7,11 @@
 var lastNamesList = ['Bianchi', 'Neri', 'Rossi', 'Verdi', 'Gialli'];
 console.log(lastNamesList)
 
-var userLastName = prompt('Inserisci il tuo cognome').trim();
-console.log(userLastName)
+do {
+    var userLastName = prompt('Inserisci il tuo cognome').trim()
+} while (!userLastName || !isNaN(userLastName))
 
-var userLastNameCapitalized = `${userLastName[0].toUpperCase()}${userLastName.slice(1)}`;
+var userLastNameCapitalized = userLastName.charAt(0).toUpperCase() + userLastName.slice(1).toLowerCase();
 
 var a = lastNamesList.push(userLastNameCapitalized);
 console.log(a)
