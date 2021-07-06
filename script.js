@@ -7,10 +7,12 @@
 var lastNamesList = ['Bianchi', 'Neri', 'Rossi', 'Verdi', 'Gialli'];
 console.log(lastNamesList)
 
-var userLastName = prompt('Inserisci il tuo cognome');
+var userLastName = prompt('Inserisci il tuo cognome').trim();
 console.log(userLastName)
 
-var a = lastNamesList.push(userLastName);
+var userLastNameCapitalized = `${userLastName[0].toUpperCase()}${userLastName.slice(1)}`;
+
+var a = lastNamesList.push(userLastNameCapitalized);
 console.log(a)
 
 var b = lastNamesList.sort();
@@ -19,5 +21,5 @@ console.log(b)
 var c = lastNamesList.length;
 console.log(c)
 
-var d = lastNamesList.indexOf(userLastName) + 1;
+var d = lastNamesList.indexOf(userLastNameCapitalized) + 1;
 console.log(d)
