@@ -14,7 +14,7 @@ printList.innerHTML = '1) La lista precedente era: ' + LastnamesList + '.';
 
 do {//VALIDATION
     var userLastname = prompt('Inserisci il tuo cognome').trim()
-} while (!userLastname || !isNaN(userLastname))
+} while (!userLastname || userLastname.trim() === '' || !isNaN(userLastname))
 
 var userLastnameCapitalized = userLastname.charAt(0).toUpperCase() + userLastname.slice(1).toLowerCase();
 
