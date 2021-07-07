@@ -10,27 +10,27 @@ var LastnamesList = ['Bianchi', 'Neri', 'Rossi', 'Verdi', 'Gialli'];
 console.log(LastnamesList)
 
 var printList = document.getElementById('list')
-printList.innerHTML = '1) La lista precedente era: ' + LastnamesList + '.';
+printList.innerHTML = '1) La lista precedente era: ' + LastnamesList.join(', ') + '.';
 
 do {//VALIDATION
-    var userLastname = prompt('Inserisci il tuo cognome')
+    var userLastname = prompt('Inserisci il tuo cognome');
 } while (!userLastname || userLastname.trim() === '' || !isNaN(userLastname));
 
 userLastname = userLastname.trim();
 
-var userLastnameCapitalized = userLastname.charAt(0).toUpperCase() + userLastname.slice(1).toLowerCase();
+var userLastnameCapitalized = userLastname.charAt(0).toUpperCase() + userLastname.substring(1).toLowerCase();
 
 var listWithYou = LastnamesList.push(userLastnameCapitalized);
 console.log(listWithYou)
 
 var printListWithYou = document.getElementById('you-in-list')
-printListWithYou.innerHTML = '2) Adesso anche "' + userLastnameCapitalized + '" risulta in lista: ' + LastnamesList + '.';
+printListWithYou.innerHTML = '2) Adesso anche "' + userLastnameCapitalized + '" risulta in lista: ' + LastnamesList.join(', ') + '.';
 
 var newListOrdered = LastnamesList.sort();
 console.log(newListOrdered)
 
 var listInAlphabeticalOrder = document.getElementById('list-in-alphabetical-order')
-listInAlphabeticalOrder.innerHTML = '3) La nuova lista, partendo in in ordine alfabetico è: ' + newListOrdered + '.';
+listInAlphabeticalOrder.innerHTML = '3) La nuova lista, partendo in in ordine alfabetico è: ' + newListOrdered.join(', ') + '.';
 
 var userPosition = parseInt(LastnamesList.indexOf(userLastnameCapitalized) + 1);
 console.log(userPosition)
