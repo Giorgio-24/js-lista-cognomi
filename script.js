@@ -13,8 +13,10 @@ var printList = document.getElementById('list')
 printList.innerHTML = '1) La lista precedente era: ' + LastnamesList + '.';
 
 do {//VALIDATION
-    var userLastname = prompt('Inserisci il tuo cognome').trim()
-} while (!userLastname || userLastname.trim() === '' || !isNaN(userLastname))
+    var userLastname = prompt('Inserisci il tuo cognome')
+} while (!userLastname || userLastname.trim() === '' || !isNaN(userLastname));
+
+userLastname = userLastname.trim();
 
 var userLastnameCapitalized = userLastname.charAt(0).toUpperCase() + userLastname.slice(1).toLowerCase();
 
